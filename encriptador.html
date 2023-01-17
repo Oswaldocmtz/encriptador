@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="script.js"></script>
+        <title>Encriptador</title>
+    </head>
+
+    <body>
+        <div class="cuerpo">  
+            <header>
+                <div class="encabezado">
+                    <img class="logo-principal" src="imagenes/logoalura.png">
+                    <h1 class="titulo-principal">Ayuda a nuestros amigos a descifrar el código</h1>
+                </div>
+            </header> 
+            <main>    
+                <section> 
+                    <div class="codificador">
+                        <textarea class="textoIngresado" name="text" name="textoCifrado" id="textoCifrado" placeholder="Ingrese el texto a traducir aquí"></textarea>
+                    </div>
+
+                    <div class="contenedor-botones">
+                        <button class="btnEncriptar" type="button" id="btnEncriptar">Encriptar</button>
+                        <button class="btnDesencriptar" type="button" id="btnDesencriptar">Desencriptar</button>
+                    </div>
+                    <h2 class="instruccion">&sext; Utilice sólo letras minúsculas y sin acentos</h2>
+                </section>  
+
+
+                    <div class="decodificador">
+                        <div>
+                            <textarea class="textoDescifrado" name="texto" id="textoDescifrado" placeholder="Aun no ingresa ningún texto para descifrar" ></textarea>
+                        </div>
+                        <div class="contenedor-copiar">
+                            <button class="btnCopiar" type="button" id="btnCopiar">Copiar</button>
+                        </div>
+                    </div>    
+            </main>
+
+            <footer>
+                <section class="footer-informacion">
+                    <div class="piedepagina">
+                        <p class="relizadopor">&copy Desarrolado por Jonatan Oswaldo Cervantes Martinez Alura Latam 2023</p>
+                    </div>
+                </section>
+            </footer>    
+        </div>
+    </body>
+    <script>
+        var btn = document.querySelector("#btnEncriptar");
+        btn.onclick = encriptar;
+
+        var btn2 = document.querySelector("#btnDesencriptar");
+        btn2.onclick = desencriptar;
+
+        var btn3 = document.querySelector("#btnCopiar");
+        btn3.onclick = copiar;
+    </script>
+   
+</html>
